@@ -42,6 +42,7 @@ public class Menu {
                     break;
                 case 2:
                     //cadastrar animal
+                    //Dar opção de selecionar o tipo de animal
                     break;
                 case 3:
                     CadastroPF cadastroPF = new CadastroPF();
