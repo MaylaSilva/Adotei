@@ -23,9 +23,13 @@
 
 É um projeto em desenvolvimento para o curso Dev<a> da Ada em parceria com a B3.
 Esse é um programa que está sendo produzido para unir as ONGs que possuem animais disponíveis para doação e os adotantes.
+  
+  
 
 <h4>#Status do Projeto</h4>
 :construction: Projeto em construção :construction:
+  
+  
 
 <h4>#Pré-requisito</h4>
 
@@ -39,11 +43,15 @@ $ git clone git@github.com:MaylaSilva/Adotei.git
 🛠️ Abrir e rodar o projeto
 Abra na sua IDE de preferência e localize e rode a classe Adotei/src/br.com.ada.adotei/testes/Menu via console.
 Caso esteja rodando via Intellij, abra a classe "Menu" e dê o comando Crtl+Shift+F10.
+  
+  
 
 <h4>#Tecnologias utilizadas</h4>
 Java 17
 Intellij
 Programação Orientada a Objetos
+  
+  
 
 <h4>#Autora</h4>
 
