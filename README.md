@@ -3,7 +3,13 @@
 
 <h1 align="center"> SEJA BEM-VINDO(A) AO ADOTEI </h1>
 
+Índice
 
+*[Descrição do projeto](#Descrição-do-projeto)
+*[Status do Projeto](#Status-do-Projeto)
+*[#Pré-requisito](#Pré-requisito)
+*[#Tecnologias utilizadas](#Tecnologias-utilizadas)
+*[#Autora](#Autora)
 
 <h4>#Descrição do projeto</h4>
 
@@ -31,9 +37,9 @@ Java 17
 Intellij
 Programação Orientada a Objetos
 
-<h4>Autor</h4>
+<h4>#Autora</h4>
 
 Mayla Silva 🚀
 Feito com dedicação e estudo. Entre em contato!
 
-<sub>LinkedIn</sub>](https://www.linkedin.com/in/mayla-silva-siqueira-krama/)
+[LinkedIn](https://www.linkedin.com/in/mayla-silva-siqueira-krama/)
