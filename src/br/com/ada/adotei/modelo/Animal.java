@@ -1,13 +1,21 @@
-package br.com.ada.adotei.Modelo;
+package br.com.ada.adotei.modelo;
 
 public class Animal {
+    private int id;
     private String nome;
     private Integer idade;
-    private Boolean estaSaudavel;
+    private Character estaSaudavel;
     private String caracteristicas;
-    private Boolean filhote;
-    private Boolean castrado;
-    private Ong nomeOng;
+    private Character filhote;
+    private Character castrado;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getNome() {
         return nome;
@@ -25,11 +33,11 @@ public class Animal {
         this.idade = idade;
     }
 
-    public Boolean getEstaSaudavel() {
+    public Character getEstaSaudavel() {
         return estaSaudavel;
     }
 
-    public void setEstaSaudavel(Boolean estaSaudavel) {
+    public void setEstaSaudavel(Character estaSaudavel) {
         this.estaSaudavel = estaSaudavel;
     }
 
@@ -41,38 +49,31 @@ public class Animal {
         this.caracteristicas = caracteristicas;
     }
 
-    public Boolean getFilhote() {
+    public Character getFilhote() {
         return filhote;
     }
 
-    public void setFilhote(Boolean filhote) {
+    public void setFilhote(Character filhote) {
         this.filhote = filhote;
     }
 
-    public Boolean getCastrado() {
+    public Character getCastrado() {
         return castrado;
     }
 
-    public void setCastrado(Boolean castrado) {
+    public void setCastrado(Character castrado) {
         this.castrado = castrado;
     }
 
-    public Ong getNomeOng() {
-        return nomeOng;
-    }
 
-    public void setNomeOng(Ong nomeOng) {
-        this.nomeOng = nomeOng;
-    }
 
-    public Animal(String nome, Integer idade, String caracteristicas, Boolean estaSaudavel, Boolean filhote, Boolean castrado, Ong nomeOng) {
+    public Animal(String nome, Integer idade, String caracteristicas, Character estaSaudavel, Character filhote, Character castrado) {
         this.nome = nome;
         this.idade = idade;
         this.caracteristicas = caracteristicas;
         this.estaSaudavel = estaSaudavel;
         this.filhote = filhote;
         this.castrado = castrado;
-        this.nomeOng = nomeOng;
     }
 
     @Override
@@ -83,7 +84,6 @@ public class Animal {
                 "Está Saudável: " + estaSaudavel + '\n' +
                 "Caracteristicas: " + caracteristicas +  '\n' +
                 "Filhote: " + filhote + '\n' +
-                "Castrado: " + castrado + '\n' +
-                "Nome da Ong:" + nomeOng;
+                "Castrado: " + castrado + '\n';
     }
 }

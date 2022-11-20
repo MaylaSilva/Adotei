@@ -1,4 +1,4 @@
-package br.com.ada.adotei.BusinessObject;
+package br.com.ada.adotei.businessobject;
 
 public enum EnumPorte {
     PEQUENO,
