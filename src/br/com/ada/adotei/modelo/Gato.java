@@ -1,6 +1,7 @@
 package br.com.ada.adotei.modelo;
 
-import br.com.ada.adotei.businessobject.EnumRacaGato;
+import br.com.ada.adotei.businessobject.EscolhaSouN;
+import br.com.ada.adotei.businessobject.EscolheRacaGato;
 
 public class Gato extends Animal{
     private EscolhaSouN usaCaixa;
@@ -15,8 +16,8 @@ public class Gato extends Animal{
 
     @Override
     public String toString() {
-        return super.toString() + '\n' +
+        return super.toString() +
                 "Raça: " + raca + '\n' +
-                "O gatinho usa caixa? " + usaCaixa;
+                "O gatinho usa caixa? " + usaCaixa + '\n';
     }
 }

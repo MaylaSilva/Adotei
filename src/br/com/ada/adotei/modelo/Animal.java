@@ -1,5 +1,10 @@
 package br.com.ada.adotei.modelo;
 
+import br.com.ada.adotei.businessobject.EscolhaSouN;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class Animal {
     private int id;
     private String nome;
@@ -29,7 +34,13 @@ public class Animal {
     }
 
     public void setIdade(Integer idade) {
-        this.idade = idade;
+        if (idade < 0){
+            System.err.println("Animal não pode ter idade negativa");
+        } else if (idade > 30) {
+            System.err.println("Não podem colocar para adoção um animal com idade superior a 30 anos");
+        } else {
+            this.idade = idade;
+        }
     }
 
     public EscolhaSouN getEstaSaudavel() {
@@ -55,9 +66,6 @@ public class Animal {
     public void setCastrado(EscolhaSouN castrado) {
         this.castrado = castrado;
     }
-
-
-
     public Animal(String nome, Integer idade, String caracteristicas, EscolhaSouN estaSaudavel, EscolhaSouN castrado) {
         this.nome = nome;
         this.idade = idade;
@@ -68,7 +76,8 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal: " + '\n' +
+        return '\n' + "Animal: " + '\n' +
+                "Id: " + id + " - " +
                 "Nome:" + nome +  '\n' +
                 "Idade: " + idade + '\n' +
                 "Está Saudável: " + estaSaudavel + '\n' +

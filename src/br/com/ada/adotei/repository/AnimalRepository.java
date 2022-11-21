@@ -3,15 +3,18 @@ package br.com.ada.adotei.repository;
 import br.com.ada.adotei.modelo.Animal;
 import br.com.ada.adotei.modelo.ImprimeCadastro;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 public class AnimalRepository {
+    Scanner sc = new Scanner(System.in);
 
     private static int sequence = 1;
     private static List<Animal> cadastra = new ArrayList();
+
+    public void limpaPosicao (){
+        Integer index = sc.nextInt();
+        this.cadastra.remove(index);
+    }
 
     public void cadastro(Animal animal) {
         setId(animal);

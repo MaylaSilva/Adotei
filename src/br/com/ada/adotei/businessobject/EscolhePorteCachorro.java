@@ -1,4 +1,4 @@
-package br.com.ada.adotei.modelo;
+package br.com.ada.adotei.businessobject;
 
 import br.com.ada.adotei.businessobject.EnumPorte;
 
@@ -7,6 +7,11 @@ import java.util.Scanner;
 public class EscolhePorteCachorro <T>{
     EnumPorte porteCachorro;
 
+
+    @Override
+    public String toString() {
+        return "Porte do cãozinho: " + porteCachorro;
+    }
 
     public void escolhePorte(T t) {
         System.out.println("1 - Pequeno " + '\n' + "2 - Médio" + '\n' + "3 - Grande");

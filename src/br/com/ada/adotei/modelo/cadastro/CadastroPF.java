@@ -1,5 +1,8 @@
-package br.com.ada.adotei.modelo;
+package br.com.ada.adotei.modelo.cadastro;
 
+import br.com.ada.adotei.modelo.Adotante;
+import br.com.ada.adotei.modelo.Endereco;
+import br.com.ada.adotei.businessobject.EscolhaSouN;
 import br.com.ada.adotei.repository.PessoaRepository;
 
 import java.util.Scanner;

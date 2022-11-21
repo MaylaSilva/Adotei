@@ -1,5 +1,8 @@
-package br.com.ada.adotei.modelo;
+package br.com.ada.adotei.modelo.cadastro;
 
+import br.com.ada.adotei.businessobject.EscolhaSouN;
+import br.com.ada.adotei.businessobject.EscolheRacaGato;
+import br.com.ada.adotei.modelo.Gato;
 import br.com.ada.adotei.repository.AnimalRepository;
 
 import java.util.Scanner;

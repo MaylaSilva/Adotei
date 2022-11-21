@@ -1,9 +1,13 @@
 package br.com.ada.adotei.testes;
 
-import br.com.ada.adotei.modelo.*;
+import br.com.ada.adotei.modelo.cadastro.CadastroCachorro;
+import br.com.ada.adotei.modelo.cadastro.CadastroGato;
+import br.com.ada.adotei.modelo.cadastro.CadastroPF;
+import br.com.ada.adotei.modelo.cadastro.CadastroPJ;
 import br.com.ada.adotei.repository.AnimalRepository;
 import br.com.ada.adotei.repository.PessoaRepository;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Menu {
@@ -54,7 +58,8 @@ public class Menu {
                     cadastroPF.cadastraPF(sc, pessoaRepository);
                     break;
                 case 5:
-                    //tirar animal da lista;
+                    System.out.println("Digite o id do animal que pretende adotar");
+                    animalRepository.limpaPosicao();
                     break;
                 case 6:
 

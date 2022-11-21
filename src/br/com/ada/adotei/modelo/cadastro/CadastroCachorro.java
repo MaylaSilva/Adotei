@@ -1,7 +1,12 @@
-package br.com.ada.adotei.modelo;
+package br.com.ada.adotei.modelo.cadastro;
 
+import br.com.ada.adotei.modelo.Cachorro;
+import br.com.ada.adotei.businessobject.EscolhaSouN;
+import br.com.ada.adotei.businessobject.EscolhePorteCachorro;
+import br.com.ada.adotei.businessobject.EscolheRacaCachorro;
 import br.com.ada.adotei.repository.AnimalRepository;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CadastroCachorro {

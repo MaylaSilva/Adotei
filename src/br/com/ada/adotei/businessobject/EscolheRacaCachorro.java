@@ -1,11 +1,13 @@
-package br.com.ada.adotei.modelo;
+package br.com.ada.adotei.businessobject;
 
 import br.com.ada.adotei.businessobject.EnumRacaCachorro;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class EscolheRacaCachorro <T> {
+public class EscolheRacaCachorro<T> {
     EnumRacaCachorro racaCachorro;
+
     public void escolheCachorro(T t) {
         System.out.println("1 - BASSET" + '\n' + "2 - CHIHUAHUA" + '\n' + "3 - CHOW CHOW");
         System.out.println("4 - CORGI" + '\n' + "5 - DALMATA" + '\n' + "6 - DOBERMAN");
@@ -15,6 +17,7 @@ public class EscolheRacaCachorro <T> {
         System.out.println("Ou digite qualquer outro número para escolher o Sem Raça Definida: ");
         Scanner sc = new Scanner(System.in);
         int raca = sc.nextInt();
+
         while (true) {
             switch (raca) {
                 case 1:

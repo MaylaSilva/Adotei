@@ -1,4 +1,4 @@
-package br.com.ada.adotei.modelo;
+package br.com.ada.adotei.modelo.cadastro;
 
 import br.com.ada.adotei.modelo.Endereco;
 import br.com.ada.adotei.modelo.Ong;
