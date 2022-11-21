@@ -4,10 +4,9 @@ public class Animal {
     private int id;
     private String nome;
     private Integer idade;
-    private Character estaSaudavel;
+    private EscolhaSouN estaSaudavel;
     private String caracteristicas;
-    private Character filhote;
-    private Character castrado;
+    private EscolhaSouN castrado;
 
     public int getId() {
         return id;
@@ -33,11 +32,11 @@ public class Animal {
         this.idade = idade;
     }
 
-    public Character getEstaSaudavel() {
+    public EscolhaSouN getEstaSaudavel() {
         return estaSaudavel;
     }
 
-    public void setEstaSaudavel(Character estaSaudavel) {
+    public void setEstaSaudavel(EscolhaSouN estaSaudavel) {
         this.estaSaudavel = estaSaudavel;
     }
 
@@ -49,30 +48,21 @@ public class Animal {
         this.caracteristicas = caracteristicas;
     }
 
-    public Character getFilhote() {
-        return filhote;
-    }
-
-    public void setFilhote(Character filhote) {
-        this.filhote = filhote;
-    }
-
-    public Character getCastrado() {
+    public EscolhaSouN getCastrado() {
         return castrado;
     }
 
-    public void setCastrado(Character castrado) {
+    public void setCastrado(EscolhaSouN castrado) {
         this.castrado = castrado;
     }
 
 
 
-    public Animal(String nome, Integer idade, String caracteristicas, Character estaSaudavel, Character filhote, Character castrado) {
+    public Animal(String nome, Integer idade, String caracteristicas, EscolhaSouN estaSaudavel, EscolhaSouN castrado) {
         this.nome = nome;
         this.idade = idade;
         this.caracteristicas = caracteristicas;
         this.estaSaudavel = estaSaudavel;
-        this.filhote = filhote;
         this.castrado = castrado;
     }
 
@@ -83,7 +73,6 @@ public class Animal {
                 "Idade: " + idade + '\n' +
                 "Está Saudável: " + estaSaudavel + '\n' +
                 "Caracteristicas: " + caracteristicas +  '\n' +
-                "Filhote: " + filhote + '\n' +
                 "Castrado: " + castrado + '\n';
     }
 }

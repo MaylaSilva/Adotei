@@ -23,22 +23,11 @@ public class CadastroPF {
         String telefone = sc.nextLine();
         System.out.println("Digite seu email: ");
         String email = sc.nextLine();
-
-        char casaProtegida;
-        while(true) {
-            System.out.println("Sua casa é protegida? Digite S ou N");
-            System.out.println("Exemplo: se for adotar gatos, precisa de tela na janela");
-            System.out.println("Exemplo: se for adotar cães, o cachorro não pode ter acesso a rua");
-
-            casaProtegida = sc.next().charAt(0);
-            if (casaProtegida != 'S' && casaProtegida != 's' && casaProtegida != 'N' && casaProtegida != 'n'){
-                System.out.println("Por favor, digite apenas S ou N");
-            } else {
-                break;
-            }
-
-            }
-
+        System.out.println("Sua casa é protegida? Digite S ou N");
+        System.out.println("Exemplo: se for adotar gatos, precisa de tela na janela");
+        System.out.println("Exemplo: se for adotar cães, o cachorro não pode ter acesso a rua");
+        EscolhaSouN casaProtegida = new EscolhaSouN();
+        casaProtegida.escolhaBinaria(sc);
 
         Adotante cadastrarPessoa = new Adotante(nome, cpf, new Endereco(rua, cep, cidade, estado),
                 telefone, email, casaProtegida);

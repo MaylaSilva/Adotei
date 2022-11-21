@@ -2,7 +2,7 @@ package br.com.ada.adotei.modelo;
 
 public class Adotante extends Pessoa{
     private String cpf;
-    private Character casaProtegida;
+    private EscolhaSouN casaProtegida;
 
     public String getCpf() {
         return cpf;
@@ -12,15 +12,15 @@ public class Adotante extends Pessoa{
         this.cpf = cpf;
     }
 
-    public Character getCasaProtegida() {
+    public EscolhaSouN getCasaProtegida() {
         return casaProtegida;
     }
 
-    public void setCasaProtegida(Character casaProtegida) {
+    public void setCasaProtegida(EscolhaSouN casaProtegida) {
         this.casaProtegida = casaProtegida;
     }
 
-    public Adotante(String nome, String cpf, Endereco endereco, String telefone, String email, Character casaProtegida) {
+    public Adotante(String nome, String cpf, Endereco endereco, String telefone, String email, EscolhaSouN casaProtegida) {
         super(nome, endereco, telefone, email);
         this.cpf = cpf;
         this.casaProtegida = casaProtegida;

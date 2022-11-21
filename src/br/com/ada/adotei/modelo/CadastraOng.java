@@ -1,4 +1,4 @@
-package br.com.ada.adotei.businessobject;
+package br.com.ada.adotei.modelo;
 
 import br.com.ada.adotei.modelo.Endereco;
 import br.com.ada.adotei.modelo.Ong;
