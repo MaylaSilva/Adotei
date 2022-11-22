@@ -1,11 +1,8 @@
-package br.com.ada.adotei.modelo;
+package br.com.ada.adotei.modelo.animal;
 
-import br.com.ada.adotei.businessobject.EscolhaSouN;
+import br.com.ada.adotei.businessobject.escolhe.EscolhaSouN;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class Animal {
+public class Animal{
     private int id;
     private String nome;
     private Integer idade;
@@ -73,7 +70,6 @@ public class Animal {
         this.estaSaudavel = estaSaudavel;
         this.castrado = castrado;
     }
-
     @Override
     public String toString() {
         return '\n' + "Animal: " + '\n' +

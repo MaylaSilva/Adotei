@@ -1,4 +1,4 @@
-package br.com.ada.adotei.businessobject;
+package br.com.ada.adotei.businessobject.escolhe;
 
 import java.util.Scanner;
 

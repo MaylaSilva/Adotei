@@ -1,7 +1,9 @@
-package br.com.ada.adotei.modelo;
+package br.com.ada.adotei.modelo.animal;
 
 
-import br.com.ada.adotei.businessobject.*;
+import br.com.ada.adotei.businessobject.escolhe.EscolhaSouN;
+import br.com.ada.adotei.businessobject.escolhe.EscolhePorteCachorro;
+import br.com.ada.adotei.businessobject.escolhe.EscolheRacaCachorro;
 
 public class Cachorro extends Animal {
     private EscolhePorteCachorro porte;

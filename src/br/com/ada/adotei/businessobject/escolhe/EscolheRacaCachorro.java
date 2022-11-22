@@ -1,8 +1,7 @@
-package br.com.ada.adotei.businessobject;
+package br.com.ada.adotei.businessobject.escolhe;
 
-import br.com.ada.adotei.businessobject.EnumRacaCachorro;
+import br.com.ada.adotei.businessobject.pacoteEnum.EnumRacaCachorro;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class EscolheRacaCachorro<T> {

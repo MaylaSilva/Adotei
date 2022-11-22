@@ -1,6 +1,6 @@
 package br.com.ada.adotei.repository;
 
-import br.com.ada.adotei.modelo.Animal;
+import br.com.ada.adotei.modelo.animal.Animal;
 import br.com.ada.adotei.modelo.ImprimeCadastro;
 
 import java.util.*;
@@ -12,8 +12,10 @@ public class AnimalRepository {
     private static List<Animal> cadastra = new ArrayList();
 
     public void limpaPosicao (){
-        Integer index = sc.nextInt();
+        int index = sc.nextInt();
+        index = index - 1;
         this.cadastra.remove(index);
+        sc.close();
     }
 
     public void cadastro(Animal animal) {
@@ -24,6 +26,7 @@ public class AnimalRepository {
             System.err.println("O nome do animal não pode ser nulo");
         }
     }
+
     private void setId(Animal animal) {
         animal.setId(sequence);
         sequence++;
@@ -32,4 +35,5 @@ public class AnimalRepository {
         ImprimeCadastro<Animal> imprime = new ImprimeCadastro();
         imprime.imprimeCadastro(cadastra);
     }
+
 }

@@ -1,6 +1,6 @@
-package br.com.ada.adotei.businessobject;
+package br.com.ada.adotei.businessobject.escolhe;
 
-import br.com.ada.adotei.businessobject.EnumRacaGato;
+import br.com.ada.adotei.businessobject.pacoteEnum.EnumRacaGato;
 
 import java.util.Scanner;
 

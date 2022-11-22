@@ -1,7 +1,7 @@
-package br.com.ada.adotei.modelo;
+package br.com.ada.adotei.modelo.animal;
 
-import br.com.ada.adotei.businessobject.EscolhaSouN;
-import br.com.ada.adotei.businessobject.EscolheRacaGato;
+import br.com.ada.adotei.businessobject.escolhe.EscolhaSouN;
+import br.com.ada.adotei.businessobject.escolhe.EscolheRacaGato;
 
 public class Gato extends Animal{
     private EscolhaSouN usaCaixa;

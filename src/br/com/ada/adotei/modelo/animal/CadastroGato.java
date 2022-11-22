@@ -1,8 +1,7 @@
-package br.com.ada.adotei.modelo.cadastro;
+package br.com.ada.adotei.modelo.animal;
 
-import br.com.ada.adotei.businessobject.EscolhaSouN;
-import br.com.ada.adotei.businessobject.EscolheRacaGato;
-import br.com.ada.adotei.modelo.Gato;
+import br.com.ada.adotei.businessobject.escolhe.EscolhaSouN;
+import br.com.ada.adotei.businessobject.escolhe.EscolheRacaGato;
 import br.com.ada.adotei.repository.AnimalRepository;
 
 import java.util.Scanner;
@@ -34,5 +33,6 @@ public class CadastroGato {
 
         AnimalRepository animalRepository = new AnimalRepository();
         animalRepository.cadastro(gato);
+        sc.close();
     }
 }

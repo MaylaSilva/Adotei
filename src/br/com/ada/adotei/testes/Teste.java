@@ -1,10 +1,6 @@
 package br.com.ada.adotei.testes;
 
-import br.com.ada.adotei.businessobject.EnumPorte;
-import br.com.ada.adotei.businessobject.EnumRacaCachorro;
-import br.com.ada.adotei.modelo.Animal;
-import br.com.ada.adotei.modelo.Cachorro;
-import br.com.ada.adotei.modelo.Ong;
+import br.com.ada.adotei.modelo.animal.Animal;
 
 import java.util.ArrayList;
 import java.util.List;

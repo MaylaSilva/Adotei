@@ -1,8 +1,6 @@
-package br.com.ada.adotei.modelo.cadastro;
+package br.com.ada.adotei.modelo.pessoa;
 
-import br.com.ada.adotei.modelo.Adotante;
-import br.com.ada.adotei.modelo.Endereco;
-import br.com.ada.adotei.businessobject.EscolhaSouN;
+import br.com.ada.adotei.businessobject.escolhe.EscolhaSouN;
 import br.com.ada.adotei.repository.PessoaRepository;
 
 import java.util.Scanner;
@@ -37,5 +35,6 @@ public class CadastroPF {
 
         PessoaRepository pessoaRepository1 = new PessoaRepository();
         pessoaRepository1.cadastro(cadastrarPessoa);
+        sc.close();
     }
 }

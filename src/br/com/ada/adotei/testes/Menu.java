@@ -1,13 +1,12 @@
 package br.com.ada.adotei.testes;
 
-import br.com.ada.adotei.modelo.cadastro.CadastroCachorro;
-import br.com.ada.adotei.modelo.cadastro.CadastroGato;
-import br.com.ada.adotei.modelo.cadastro.CadastroPF;
-import br.com.ada.adotei.modelo.cadastro.CadastroPJ;
+import br.com.ada.adotei.modelo.animal.CadastroCachorro;
+import br.com.ada.adotei.modelo.animal.CadastroGato;
+import br.com.ada.adotei.modelo.pessoa.CadastroPF;
+import br.com.ada.adotei.modelo.pessoa.CadastroPJ;
 import br.com.ada.adotei.repository.AnimalRepository;
 import br.com.ada.adotei.repository.PessoaRepository;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Menu {
@@ -29,10 +28,9 @@ public class Menu {
             System.out.println("2 - Sou uma ONG e quero cadastrar um gato");
             System.out.println("3 - Sou uma ONG e quero cadastrar um cachorro");
             System.out.println("4 - Sou um adotante e quero me cadastrar");
-            System.out.println("5 - Sou um adotante e quero adotar um gato");
-            System.out.println("6 - Sou um adotante e quero adotar um cachorro");
-            System.out.println("7 - Quero ver os animais disponíveis");
-            System.out.println("8 - Quero ver a lista de pessoas e ONGs cadastradas");
+            System.out.println("5 - Sou um adotante e quero adotar um cachorro");
+            System.out.println("6 - Quero ver a lista de animais disponíveis");
+            System.out.println("7 - Quero ver a lista de pessoas e ONGs cadastradas");
             System.out.println("9 - Sair");
             System.out.println("--------------------------------------------");
 
@@ -62,12 +60,9 @@ public class Menu {
                     animalRepository.limpaPosicao();
                     break;
                 case 6:
-
-                    break;
-                case 7:
                     animalRepository.impressao();
                     break;
-                case 8:
+                case 7:
                     pessoaRepository.impressao();
                     break;
                 case 9:

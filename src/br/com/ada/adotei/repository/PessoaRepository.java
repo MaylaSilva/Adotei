@@ -1,11 +1,11 @@
 package br.com.ada.adotei.repository;
 
 import br.com.ada.adotei.modelo.*;
+import br.com.ada.adotei.modelo.pessoa.Pessoa;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.Scanner;
 
 public class PessoaRepository {
     private static int sequence = 1;

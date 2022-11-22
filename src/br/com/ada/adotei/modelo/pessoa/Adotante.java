@@ -1,6 +1,6 @@
-package br.com.ada.adotei.modelo;
+package br.com.ada.adotei.modelo.pessoa;
 
-import br.com.ada.adotei.businessobject.EscolhaSouN;
+import br.com.ada.adotei.businessobject.escolhe.EscolhaSouN;
 
 public class Adotante extends Pessoa{
     private String cpf;

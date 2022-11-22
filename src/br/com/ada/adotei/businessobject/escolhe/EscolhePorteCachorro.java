@@ -1,6 +1,6 @@
-package br.com.ada.adotei.businessobject;
+package br.com.ada.adotei.businessobject.escolhe;
 
-import br.com.ada.adotei.businessobject.EnumPorte;
+import br.com.ada.adotei.businessobject.pacoteEnum.EnumPorte;
 
 import java.util.Scanner;
 

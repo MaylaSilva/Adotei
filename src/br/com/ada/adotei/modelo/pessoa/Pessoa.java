@@ -1,4 +1,4 @@
-package br.com.ada.adotei.modelo;
+package br.com.ada.adotei.modelo.pessoa;
 
 public class Pessoa {
 

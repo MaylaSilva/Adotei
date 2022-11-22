@@ -1,4 +1,4 @@
-package br.com.ada.adotei.businessobject;
+package br.com.ada.adotei.businessobject.pacoteEnum;
 
 public enum EnumRacaCachorro {
     SRD,

@@ -1,12 +1,10 @@
-package br.com.ada.adotei.modelo.cadastro;
+package br.com.ada.adotei.modelo.animal;
 
-import br.com.ada.adotei.modelo.Cachorro;
-import br.com.ada.adotei.businessobject.EscolhaSouN;
-import br.com.ada.adotei.businessobject.EscolhePorteCachorro;
-import br.com.ada.adotei.businessobject.EscolheRacaCachorro;
+import br.com.ada.adotei.businessobject.escolhe.EscolhaSouN;
+import br.com.ada.adotei.businessobject.escolhe.EscolhePorteCachorro;
+import br.com.ada.adotei.businessobject.escolhe.EscolheRacaCachorro;
 import br.com.ada.adotei.repository.AnimalRepository;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CadastroCachorro {
@@ -35,5 +33,6 @@ public class CadastroCachorro {
 
         AnimalRepository animalRepository = new AnimalRepository();
         animalRepository.cadastro(cachorro);
+        sc.close();
     }
 }

@@ -1,6 +1,9 @@
-package br.com.ada.adotei.modelo;
+package br.com.ada.adotei.modelo.pessoa;
 
-public class Ong extends Pessoa{
+import br.com.ada.adotei.modelo.pessoa.Endereco;
+import br.com.ada.adotei.modelo.pessoa.Pessoa;
+
+public class Ong extends Pessoa {
 
     private String CNPJ;
     private Integer dataAbertura;
