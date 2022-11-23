@@ -1,8 +1,9 @@
 package br.com.ada.adotei.modelo.animal;
 
 import br.com.ada.adotei.businessobject.escolhe.EscolhaSouN;
+import br.com.ada.adotei.modelo.Identificavel;
 
-public class Animal{
+public class Animal implements Identificavel {
     private int id;
     private String nome;
     private Integer idade;
@@ -10,6 +11,8 @@ public class Animal{
     private String caracteristicas;
     private EscolhaSouN castrado;
 
+
+    @Override
     public int getId() {
         return id;
     }
@@ -70,6 +73,7 @@ public class Animal{
         this.estaSaudavel = estaSaudavel;
         this.castrado = castrado;
     }
+
     @Override
     public String toString() {
         return '\n' + "Animal: " + '\n' +

@@ -72,5 +72,6 @@ public class Menu {
                     System.out.println("Opção inválida, digite novamente uma opção.");
             }
         }while(escolhaMenu != SAIR);
+        sc.close();
     }
 }

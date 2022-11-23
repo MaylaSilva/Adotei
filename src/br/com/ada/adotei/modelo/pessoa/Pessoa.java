@@ -1,6 +1,8 @@
 package br.com.ada.adotei.modelo.pessoa;
 
-public class Pessoa {
+import br.com.ada.adotei.modelo.Identificavel;
+
+public class Pessoa implements Identificavel {
 
     private int id;
     private String nome;
