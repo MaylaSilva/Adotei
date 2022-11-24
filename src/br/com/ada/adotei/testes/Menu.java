@@ -28,7 +28,7 @@ public class Menu {
             System.out.println("2 - Sou uma ONG e quero cadastrar um gato");
             System.out.println("3 - Sou uma ONG e quero cadastrar um cachorro");
             System.out.println("4 - Sou um adotante e quero me cadastrar");
-            System.out.println("5 - Sou um adotante e quero adotar um cachorro");
+            System.out.println("5 - Sou um adotante e quero adotar um animal");
             System.out.println("6 - Quero ver a lista de animais disponíveis");
             System.out.println("7 - Quero ver a lista de pessoas e ONGs cadastradas");
             System.out.println("9 - Sair");

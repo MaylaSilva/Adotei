@@ -30,11 +30,19 @@ public class CadastroGato {
             System.out.println("O gato usa a caixinha?");
             EscolhaSouN usaCaixa = new EscolhaSouN();
             usaCaixa.escolhaBinaria(sc);
-            Gato gato = new Gato(nome, escolheRacaGato, idade, caracteristicas, estaSaudavel,
-                    castrado, usaCaixa);
+
+            Gato gato1 = new GatoBuilder()
+                    .nome(nome)
+                    .raca(escolheRacaGato)
+                    .idade(idade)
+                    .caracteristicas(caracteristicas)
+                    .estaSaudavel(estaSaudavel)
+                    .castrado(castrado)
+                    .usaCaixa(usaCaixa)
+                    .build();
 
             AnimalRepository animalRepository = new AnimalRepository();
-            animalRepository.cadastro(gato);
+            animalRepository.cadastro(gato1);
             System.out.println("O gatinho foi cadastrado com sucesso. Logo ele encontrará um lar");
 
         } catch (InputMismatchException e) {

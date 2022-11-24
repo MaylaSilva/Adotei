@@ -35,7 +35,7 @@ public class CadastroPF {
             Adotante cadastrarPessoa1 = new PFBuilder()
                     .nome(nome)
                     .cpf(cpf)
-                    .endereco(new Endereco(rua, cep, cidade, estado))
+                    .endereco(new EnderecoBuilder().nomeDaRua(rua).cep(cep).cidade(cidade).estado(estado).build())
                     .telefone(telefone)
                     .email(email)
                     .casaProtegida(casaProtegida)

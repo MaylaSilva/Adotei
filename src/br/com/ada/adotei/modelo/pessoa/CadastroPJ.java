@@ -31,12 +31,20 @@ public class CadastroPJ {
             System.out.println("Digite o site da ONG: ");
             String site = sc.nextLine();
 
-            Ong cadastrarPessoa = new Ong(nome, cnpj, new Endereco(rua, cep, cidade, estado),
-                    dataDeAbertura, telefone, email, site);
+            Ong cadastrarPessoa1 = new PJBuilder()
+                    .nome(nome)
+                    .cnpj(cnpj)
+                    .endereco(new EnderecoBuilder().nomeDaRua(rua).cep(cep).cidade(cidade).estado(estado).build())
+                    .dataAbertura(dataDeAbertura)
+                    .telefone(telefone)
+                    .email(email)
+                    .site(site)
+                    .build();
+
             System.out.println("ONG Cadastrada! Voltaremos ao menu.");
 
             PessoaRepository pessoaRepository1 = new PessoaRepository();
-            pessoaRepository1.cadastro(cadastrarPessoa);
+            pessoaRepository1.cadastro(cadastrarPessoa1);
         } catch (InputMismatchException e) {
             System.out.println("Você digitou algo incorretamente no cadastro da sua ONG, será necessário refazer o processo");
             cadastraPJ(sc, pessoaRepository);

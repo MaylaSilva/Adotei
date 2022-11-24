@@ -1,20 +1,17 @@
 package br.com.ada.adotei.modelo.pessoa;
 
-import br.com.ada.adotei.modelo.pessoa.Endereco;
-import br.com.ada.adotei.modelo.pessoa.Pessoa;
-
 public class Ong extends Pessoa {
 
-    private String CNPJ;
+    private String cnpj;
     private Integer dataAbertura;
     private String site;
 
-     public String getCNPJ() {
-        return CNPJ;
+     public String getCnpj() {
+        return cnpj;
     }
 
-    public void setCNPJ(String CNPJ) {
-        this.CNPJ = CNPJ;
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
     }
 
      public Integer getDataAbertura() {
@@ -33,9 +30,9 @@ public class Ong extends Pessoa {
         this.site = site;
     }
 
-    public Ong(String nome, String CNPJ, Endereco endereco, Integer dataAbertura, String telefone, String email, String site) {
+    public Ong(String nome, String cnpj, Endereco endereco, Integer dataAbertura, String telefone, String email, String site) {
         super(nome,endereco, telefone, email);
-        this.CNPJ = CNPJ;
+        this.cnpj = cnpj;
         this.dataAbertura = dataAbertura;
         this.site = site;
     }
@@ -43,7 +40,7 @@ public class Ong extends Pessoa {
     @Override
     public String toString() {
         return super.toString() + '\n' +
-                "CNPJ: " + CNPJ + '\n' +
+                "CNPJ: " + cnpj + '\n' +
                 "Data de abertura: " + dataAbertura + '\n' +
                 "Site: " + site + '\n' +
                 "--------------------------------------------";

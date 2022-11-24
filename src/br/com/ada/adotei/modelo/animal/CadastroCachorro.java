@@ -32,10 +32,20 @@ public class CadastroCachorro {
             EscolhaSouN castrado = new EscolhaSouN();
             castrado.escolhaBinaria(sc);
 
-            Cachorro cachorro = new Cachorro(nome, escolheRacaCachorro, escolhePorteCachorro, idade, caracteristicas, estaSaudavel, castrado);
+            Cachorro cachorro1 = new CachorroBuilder()
+                    .nome(nome)
+                    .raca(escolheRacaCachorro)
+                    .porte(escolhePorteCachorro)
+                    .idade(idade)
+                    .caracteristicas(caracteristicas)
+                    .estaSaudavel(estaSaudavel)
+                    .castrado(castrado)
+                    .build();
+
+
             System.out.println("O cãozinho foi cadastrado com sucesso! Logo ele encontrará um lar!");
             AnimalRepository animalRepository1 = new AnimalRepository();
-            animalRepository1.cadastro(cachorro);
+            animalRepository1.cadastro(cachorro1);
 
         } catch (InputMismatchException e) {
             System.out.println("Você digitou algo incorretamente no cadastro do cachorro, será necessário refazer o processo");

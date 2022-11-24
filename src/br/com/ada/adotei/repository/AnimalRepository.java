@@ -15,7 +15,7 @@ public class AnimalRepository {
         int index = sc.nextInt();
         index = index - 1;
         this.cadastra.remove(index);
-        sc.close();
+        System.out.println("O animal do id " + index + " foi adotado");
     }
 
     public void cadastro(Animal animal) {
