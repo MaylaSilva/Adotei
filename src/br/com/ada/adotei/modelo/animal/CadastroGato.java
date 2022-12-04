@@ -2,8 +2,8 @@ package br.com.ada.adotei.modelo.animal;
 
 import br.com.ada.adotei.businessobject.escolhe.EscolhaSouN;
 import br.com.ada.adotei.businessobject.escolhe.EscolheRacaGato;
+import br.com.ada.adotei.modelo.CalculaIdade;
 import br.com.ada.adotei.repository.AnimalRepository;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -16,9 +16,7 @@ public class CadastroGato {
             System.out.println("Qual é a raça do gato? Escolha dentre as opções");
             EscolheRacaGato escolheRacaGato = new EscolheRacaGato();
             escolheRacaGato.escolhaGatinho(sc);
-            System.out.println("Digite a idade do gato: ");
-            Integer idade = sc.nextInt();
-            String pulaLinha1 = sc.nextLine();
+            int idade = CalculaIdade.addDate();
             System.out.println("Digite as características do gato: ");
             String caracteristicas = sc.nextLine();
             System.out.println("O gato está saudável?");

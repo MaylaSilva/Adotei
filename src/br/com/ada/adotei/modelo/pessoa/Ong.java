@@ -1,9 +1,11 @@
 package br.com.ada.adotei.modelo.pessoa;
 
+import java.time.LocalDate;
+
 public class Ong extends Pessoa {
 
     private String cnpj;
-    private Integer dataAbertura;
+    private LocalDate dataAbertura;
     private String site;
 
      public String getCnpj() {
@@ -14,12 +16,12 @@ public class Ong extends Pessoa {
         this.cnpj = cnpj;
     }
 
-     public Integer getDataAbertura() {
+     public LocalDate getDataAbertura() {
         return dataAbertura;
     }
 
-    public void setDataAbertura(Integer dataAbertura) {
-        this.dataAbertura = dataAbertura;
+    public void setDataAbertura(LocalDate dataAbertura) {
+         this.dataAbertura = dataAbertura;
     }
 
      public String getSite() {
@@ -30,7 +32,7 @@ public class Ong extends Pessoa {
         this.site = site;
     }
 
-    public Ong(String nome, String cnpj, Endereco endereco, Integer dataAbertura, String telefone, String email, String site) {
+    public Ong(String nome, String cnpj, Endereco endereco, LocalDate dataAbertura, String telefone, String email, String site) {
         super(nome,endereco, telefone, email);
         this.cnpj = cnpj;
         this.dataAbertura = dataAbertura;

@@ -2,7 +2,9 @@ package br.com.ada.adotei.modelo.pessoa;
 
 import br.com.ada.adotei.businessobject.escolhe.EscolhaSouN;
 import br.com.ada.adotei.repository.PessoaRepository;
-
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -12,6 +14,7 @@ public class CadastroPF {
             System.out.println("Digite seu nome: ");
             String nome = sc.next();
             String pulaLinha = sc.nextLine();
+            addDate();
             System.out.println("Digite seu CPF: ");
             String cpf = sc.nextLine();
             System.out.println("Digite o nome da sua rua, número da residência e complemento:");
@@ -34,6 +37,7 @@ public class CadastroPF {
 
             Adotante cadastrarPessoa1 = new PFBuilder()
                     .nome(nome)
+                    .dataDeNascimento(addDate())
                     .cpf(cpf)
                     .endereco(new EnderecoBuilder().nomeDaRua(rua).cep(cep).cidade(cidade).estado(estado).build())
                     .telefone(telefone)
@@ -49,5 +53,20 @@ public class CadastroPF {
             System.out.println("Você digitou algo incorretamente no seu cadastro, será necessário refazer o processo");
             cadastraPF(sc, pessoaRepository);
         }
+    }
+
+    public static LocalDate addDate() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite a sua data de nascimento (Formato: dd/mm/aaaa): ");
+        String dataDeNascimento = sc.nextLine();
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate data = LocalDate.parse(dataDeNascimento,dtf);        ;
+        LocalDate hoje = LocalDate.now();
+        if (Period.between(data,hoje).getYears() < 18){
+            System.out.println("Infelizmente só podemos doar nossos animais para maiores de idade");
+            return data;
+        }
+        return LocalDate.parse(dataDeNascimento, dtf);
+        //Verificar porque o código não para e porque ele pede duas vezes a data
     }
 }

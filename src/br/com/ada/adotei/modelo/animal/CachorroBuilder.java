@@ -6,7 +6,7 @@ import br.com.ada.adotei.businessobject.escolhe.EscolheRacaCachorro;
 
 public class CachorroBuilder {
     private String nome;
-    private Integer idade;
+    private int idade;
     private EscolhaSouN estaSaudavel;
     private String caracteristicas;
     private EscolhaSouN castrado;
@@ -18,7 +18,7 @@ public class CachorroBuilder {
         return this;
     }
 
-    public CachorroBuilder idade(Integer idade) {
+    public CachorroBuilder idade(int idade) {
         this.idade = idade;
         return this;
     }
@@ -47,8 +47,9 @@ public class CachorroBuilder {
         this.raca = raca;
         return this;
     }
-    public Cachorro build(){
-        Cachorro cachorroCadastrado = new Cachorro(nome,raca,porte,idade,caracteristicas,estaSaudavel,castrado);
+
+    public Cachorro build() {
+        Cachorro cachorroCadastrado = new Cachorro(nome, raca, porte, idade, caracteristicas, estaSaudavel, castrado);
         return cachorroCadastrado;
     }
 }

@@ -2,7 +2,6 @@ package br.com.ada.adotei.modelo.animal;
 
 import br.com.ada.adotei.businessobject.escolhe.EscolhaSouN;
 import br.com.ada.adotei.businessobject.escolhe.EscolheRacaGato;
-
 public class GatoBuilder {
     private String nome;
     private Integer idade;

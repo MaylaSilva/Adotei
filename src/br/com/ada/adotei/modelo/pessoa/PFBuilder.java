@@ -1,6 +1,7 @@
 package br.com.ada.adotei.modelo.pessoa;
 
 import br.com.ada.adotei.businessobject.escolhe.EscolhaSouN;
+import java.time.LocalDate;
 
 public class PFBuilder {
     private String nome;
@@ -8,6 +9,7 @@ public class PFBuilder {
     private String telefone;
     private String email;
     private String cpf;
+    private LocalDate dataDeNascimento;
     private EscolhaSouN casaProtegida;
 
 
@@ -35,12 +37,17 @@ public class PFBuilder {
         return this;
     }
 
+    public PFBuilder dataDeNascimento (LocalDate dataDeNascimento) {
+        this.dataDeNascimento = dataDeNascimento;
+        return this;
+    }
+
     public PFBuilder casaProtegida(EscolhaSouN casaProtegida) {
         this.casaProtegida = casaProtegida;
         return this;
     }
     public Adotante build (){
-        Adotante adotanteCriado = new Adotante(nome, cpf, endereco, telefone, email, casaProtegida);
+        Adotante adotanteCriado = new Adotante(nome, dataDeNascimento, cpf, endereco, telefone, email, casaProtegida);
         return adotanteCriado;
     }
 }

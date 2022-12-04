@@ -1,10 +1,24 @@
 package br.com.ada.adotei.modelo.pessoa;
 
 import br.com.ada.adotei.businessobject.escolhe.EscolhaSouN;
+import java.time.LocalDate;
 
 public class Adotante extends Pessoa{
+    private LocalDate dataDeNascimento;
     private String cpf;
     private EscolhaSouN casaProtegida;
+
+    public LocalDate getDataDeNascimento() {
+        return dataDeNascimento;
+    }
+
+    public void setDataDeNascimento(LocalDate dataDeNascimento) {
+        if (dataDeNascimento.getYear() < 18){
+            System.out.println("Infelizmente só podemos doar nossos animais para maiores de idade");
+        } else {
+            this.dataDeNascimento = dataDeNascimento;
+        }
+    }
 
     public String getCpf() {
         return cpf;
@@ -22,8 +36,9 @@ public class Adotante extends Pessoa{
         this.casaProtegida = casaProtegida;
     }
 
-    public Adotante(String nome, String cpf, Endereco endereco, String telefone, String email, EscolhaSouN casaProtegida) {
+    public Adotante(String nome, LocalDate dataDeNascimento, String cpf, Endereco endereco, String telefone, String email, EscolhaSouN casaProtegida) {
         super(nome, endereco, telefone, email);
+        this.dataDeNascimento = dataDeNascimento;
         this.cpf = cpf;
         this.casaProtegida = casaProtegida;
     }
@@ -31,6 +46,7 @@ public class Adotante extends Pessoa{
     @Override
     public String toString() {
         return super.toString() + '\n' +
+                "Data de Nascimento: " + dataDeNascimento + '\n' +
                 "CPF: " + cpf + '\n' +
                 "Sua Casa está pronta para receber seu novo pet? " + casaProtegida;
     }

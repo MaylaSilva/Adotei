@@ -1,5 +1,7 @@
 package br.com.ada.adotei.modelo.pessoa;
 
+import java.time.LocalDate;
+
 public class PJBuilder {
 
     private String nome;
@@ -7,7 +9,7 @@ public class PJBuilder {
     private Endereco endereco;
     private String telefone;
     private String email;
-    private Integer dataAbertura;
+    private LocalDate dataAbertura;
     private String site;
 
 
@@ -36,7 +38,7 @@ public class PJBuilder {
         return this;
     }
 
-    public PJBuilder dataAbertura(Integer dataAbertura) {
+    public PJBuilder dataAbertura(LocalDate dataAbertura) {
         this.dataAbertura = dataAbertura;
         return this;
     }

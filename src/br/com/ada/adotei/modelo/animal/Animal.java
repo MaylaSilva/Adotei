@@ -2,11 +2,15 @@ package br.com.ada.adotei.modelo.animal;
 
 import br.com.ada.adotei.businessobject.escolhe.EscolhaSouN;
 import br.com.ada.adotei.modelo.Identificavel;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 public class Animal implements Identificavel {
     private int id;
     private String nome;
-    private Integer idade;
+    private int idade;
     private EscolhaSouN estaSaudavel;
     private String caracteristicas;
     private EscolhaSouN castrado;
@@ -29,14 +33,20 @@ public class Animal implements Identificavel {
         this.nome = nome;
     }
 
-    public Integer getIdade() {
+    public int getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
-        if (idade < 0){
+    public void setIdade(int idade) {
+        Scanner sc = new Scanner(System.in);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String data = sc.nextLine();
+        LocalDate nascimento = LocalDate.parse(data,dtf);
+        int idade1 = Period.between(nascimento, LocalDate.now()).getYears();
+        idade = idade1;
+        if (idade1 < 0){
             System.err.println("Animal não pode ter idade negativa");
-        } else if (idade > 30) {
+        } else if (idade1 > 30) {
             System.err.println("Não podem colocar para adoção um animal com idade superior a 30 anos");
         } else {
             this.idade = idade;
@@ -66,7 +76,7 @@ public class Animal implements Identificavel {
     public void setCastrado(EscolhaSouN castrado) {
         this.castrado = castrado;
     }
-    public Animal(String nome, Integer idade, String caracteristicas, EscolhaSouN estaSaudavel, EscolhaSouN castrado) {
+    public Animal(String nome, int idade, String caracteristicas, EscolhaSouN estaSaudavel, EscolhaSouN castrado) {
         this.nome = nome;
         this.idade = idade;
         this.caracteristicas = caracteristicas;

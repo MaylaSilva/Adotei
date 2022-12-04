@@ -1,7 +1,8 @@
 package br.com.ada.adotei.modelo.pessoa;
 
 import br.com.ada.adotei.repository.PessoaRepository;
-
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -21,9 +22,7 @@ public class CadastroPJ {
             String cidade = sc.nextLine();
             System.out.println("Digite o seu estado: ");
             String estado = sc.nextLine();
-            System.out.println("Digite a data de abertura da ONG: ");
-            Integer dataDeAbertura = sc.nextInt();
-            String pulalinha1 = sc.nextLine();
+            addDate();
             System.out.println("Digite o número de telefone ONG: ");
             String telefone = sc.nextLine();
             System.out.println("E o email: ");
@@ -35,7 +34,7 @@ public class CadastroPJ {
                     .nome(nome)
                     .cnpj(cnpj)
                     .endereco(new EnderecoBuilder().nomeDaRua(rua).cep(cep).cidade(cidade).estado(estado).build())
-                    .dataAbertura(dataDeAbertura)
+                    .dataAbertura(addDate())
                     .telefone(telefone)
                     .email(email)
                     .site(site)
@@ -49,5 +48,13 @@ public class CadastroPJ {
             System.out.println("Você digitou algo incorretamente no cadastro da sua ONG, será necessário refazer o processo");
             cadastraPJ(sc, pessoaRepository);
         }
+    }
+
+    public static LocalDate addDate() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite a data de abertura da ONG (Formato: dd/mm/aaaa): ");
+        String dataDeAbertura = sc.nextLine();
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        return LocalDate.parse(dataDeAbertura, dtf);
     }
 }
