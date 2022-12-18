@@ -65,7 +65,7 @@ public class EscolheRacaCachorro<T> {
                     racaCachorro = EnumRacaCachorro.YORKSHIRE;
                     break;
                 default:
-                    System.out.println(EnumRacaCachorro.SRD);
+                    racaCachorro = EnumRacaCachorro.SRD;
                     break;
             }
             break;

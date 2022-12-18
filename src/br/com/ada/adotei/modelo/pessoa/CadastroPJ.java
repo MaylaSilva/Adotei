@@ -14,7 +14,7 @@ public class CadastroPJ {
             String pulalinha = sc.nextLine();
             System.out.println("Digite seu CNPJ: ");
             String cnpj = sc.nextLine();
-            System.out.println("Digite o nome da sua rua, número da residência e complemento:");
+            System.out.println("Digite o nome da sua rua, número e complemento:");
             String rua = sc.nextLine();
             System.out.println("Digite o CEP: ");
             String cep = sc.nextLine();
@@ -22,7 +22,7 @@ public class CadastroPJ {
             String cidade = sc.nextLine();
             System.out.println("Digite o seu estado: ");
             String estado = sc.nextLine();
-            addDate();
+            LocalDate data = addDate();
             System.out.println("Digite o número de telefone ONG: ");
             String telefone = sc.nextLine();
             System.out.println("E o email: ");
@@ -30,20 +30,19 @@ public class CadastroPJ {
             System.out.println("Digite o site da ONG: ");
             String site = sc.nextLine();
 
-            Ong cadastrarPessoa1 = new PJBuilder()
+            Ong cadastrarPessoa = new PJBuilder()
                     .nome(nome)
                     .cnpj(cnpj)
                     .endereco(new EnderecoBuilder().nomeDaRua(rua).cep(cep).cidade(cidade).estado(estado).build())
-                    .dataAbertura(addDate())
+                    .dataAbertura(data)
                     .telefone(telefone)
                     .email(email)
                     .site(site)
                     .build();
 
+            pessoaRepository.cadastrarContato(cadastrarPessoa);
             System.out.println("ONG Cadastrada! Voltaremos ao menu.");
 
-            PessoaRepository pessoaRepository1 = new PessoaRepository();
-            pessoaRepository1.cadastro(cadastrarPessoa1);
         } catch (InputMismatchException e) {
             System.out.println("Você digitou algo incorretamente no cadastro da sua ONG, será necessário refazer o processo");
             cadastraPJ(sc, pessoaRepository);

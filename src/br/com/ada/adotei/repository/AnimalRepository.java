@@ -1,21 +1,22 @@
 package br.com.ada.adotei.repository;
 
 import br.com.ada.adotei.modelo.animal.Animal;
-import br.com.ada.adotei.modelo.ImprimeCadastro;
+import br.com.ada.adotei.testes.Menu;
 
 import java.util.*;
 
 public class AnimalRepository {
     Scanner sc = new Scanner(System.in);
 
-    private static int sequence = 1;
     private static List<Animal> cadastra = new ArrayList();
+
 
     public void limpaPosicao (){
         int index = sc.nextInt();
         index = index - 1;
+        System.out.println(this.cadastra.get(index));
         this.cadastra.remove(index);
-        System.out.println("O animal do id " + index + " foi adotado");
+        System.out.println("O animal do foi adotado");
     }
 
     public void cadastro(Animal animal) {
@@ -28,12 +29,15 @@ public class AnimalRepository {
     }
 
     private void setId(Animal animal) {
-        animal.setId(sequence);
-        sequence++;
+        animal.setId(Menu.sequenceAnimal);
+        Menu.sequenceAnimal++;
     }
-    public void impressao(){
-        ImprimeCadastro<Animal> imprime = new ImprimeCadastro();
-        imprime.imprimeCadastro(cadastra);
+    public void imprime (){
+        cadastra.stream().forEach(System.out::println);
     }
-
+//    public void impressao() {
+//        for (Animal obj : cadastra) {
+//            System.out.println(cadastra);
+//        }
+//    }
 }

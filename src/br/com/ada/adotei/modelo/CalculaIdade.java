@@ -12,10 +12,9 @@ public class CalculaIdade {
         try {
             Scanner sc = new Scanner(System.in);
             System.out.println("Digite a data de nascimento aproximada do animal (Formato dd/mm/aaaa): ");
-            String dataDeNascimento = sc.nextLine();
+            String nascimento = sc.nextLine();
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-            LocalDate formatado = LocalDate.parse(dataDeNascimento, dtf);
-            idade = Period.between(formatado, LocalDate.now()).getYears();
+            idade = Period.between(LocalDate.parse(nascimento, dtf), LocalDate.now()).getYears();
             if (idade > 30) {
                 System.err.println("Não podem colocar para adoção um animal com idade superior a 30 anos");
                 addDate();
@@ -26,5 +25,6 @@ public class CalculaIdade {
         }
         return idade;
     }
+    //porque o primeiro cadastro sai com a idade zerada?
 }
 

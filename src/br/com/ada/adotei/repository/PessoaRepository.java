@@ -1,15 +1,16 @@
 package br.com.ada.adotei.repository;
 
-import br.com.ada.adotei.modelo.*;
 import br.com.ada.adotei.modelo.pessoa.Pessoa;
+import br.com.ada.adotei.testes.Menu;
 
+import java.io.*;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class PessoaRepository {
-    private static int sequence = 1;
-    private static List<Pessoa> cadastra = new ArrayList<>();
+    public static List<Pessoa> cadastra = new ArrayList<>();
 
     public void cadastro(Pessoa pessoa) {
         setId(pessoa);
@@ -21,11 +22,22 @@ public class PessoaRepository {
     }
 
     private void setId(Pessoa pessoa) {
-        pessoa.setId(sequence);
-        sequence++;
+        pessoa.setId(Menu.sequencePessoa);
+        Menu.sequencePessoa++;
     }
-    public void impressao(){
-        ImprimeCadastro<Pessoa> imprime = new ImprimeCadastro();
-        imprime.imprimeCadastro(cadastra);
+    public void imprime (){
+        cadastra.stream().forEach(System.out::println);
+    }
+    public void cadastrarContato(Pessoa pessoa) {
+        Path testePath = Path.of("src/resources/pessoa.txt");
+        File arquivo = testePath.toFile();
+        cadastra.add(pessoa);
+        try (var out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(arquivo)))) {
+            for(Pessoa i : cadastra) {
+                out.writeObject(i);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

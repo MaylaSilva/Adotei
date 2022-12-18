@@ -2,7 +2,9 @@ package br.com.ada.adotei.modelo.pessoa;
 
 import br.com.ada.adotei.modelo.Identificavel;
 
-public class Pessoa implements Identificavel {
+import java.io.Serializable;
+
+public class Pessoa implements Serializable {
 
     private int id;
     private String nome;

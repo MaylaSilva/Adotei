@@ -14,7 +14,7 @@ public class CadastroPF {
             System.out.println("Digite seu nome: ");
             String nome = sc.next();
             String pulaLinha = sc.nextLine();
-            addDate();
+            LocalDate aniversario = addDate();
             System.out.println("Digite seu CPF: ");
             String cpf = sc.nextLine();
             System.out.println("Digite o nome da sua rua, número da residência e complemento:");
@@ -35,9 +35,9 @@ public class CadastroPF {
             EscolhaSouN casaProtegida = new EscolhaSouN();
             casaProtegida.escolhaBinaria(sc);
 
-            Adotante cadastrarPessoa1 = new PFBuilder()
+            Adotante cadastrarPessoa = new PFBuilder()
                     .nome(nome)
-                    .dataDeNascimento(addDate())
+                    .dataDeNascimento(aniversario)
                     .cpf(cpf)
                     .endereco(new EnderecoBuilder().nomeDaRua(rua).cep(cep).cidade(cidade).estado(estado).build())
                     .telefone(telefone)
@@ -45,10 +45,8 @@ public class CadastroPF {
                     .casaProtegida(casaProtegida)
                     .build();
 
+            pessoaRepository.cadastrarContato(cadastrarPessoa);
             System.out.println("Parabéns, você já está cadastrado!");
-
-            PessoaRepository pessoaRepository1 = new PessoaRepository();
-            pessoaRepository1.cadastro(cadastrarPessoa1);
         } catch (InputMismatchException e) {
             System.out.println("Você digitou algo incorretamente no seu cadastro, será necessário refazer o processo");
             cadastraPF(sc, pessoaRepository);
@@ -67,6 +65,5 @@ public class CadastroPF {
             return data;
         }
         return LocalDate.parse(dataDeNascimento, dtf);
-        //Verificar porque o código não para e porque ele pede duas vezes a data
     }
 }

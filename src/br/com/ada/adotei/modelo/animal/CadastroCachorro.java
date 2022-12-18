@@ -40,10 +40,8 @@ public class CadastroCachorro {
                     .castrado(castrado)
                     .build();
 
-
+            animalRepository.cadastro(cachorro1);
             System.out.println("O cãozinho foi cadastrado com sucesso! Logo ele encontrará um lar!");
-            AnimalRepository animalRepository1 = new AnimalRepository();
-            animalRepository1.cadastro(cachorro1);
 
         } catch (InputMismatchException e) {
             System.out.println("Você digitou algo incorretamente no cadastro do cachorro, será necessário refazer o processo");

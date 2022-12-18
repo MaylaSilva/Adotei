@@ -8,7 +8,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CadastroGato {
-    public void cadastrarGato(Scanner sc, AnimalRepository animalRepositoryRepository) {
+    public void cadastrarGato(Scanner sc, AnimalRepository animalRepository) {
         try {
             System.out.println("Digite o nome do gato: ");
             String nome = sc.next();
@@ -29,7 +29,7 @@ public class CadastroGato {
             EscolhaSouN usaCaixa = new EscolhaSouN();
             usaCaixa.escolhaBinaria(sc);
 
-            Gato gato1 = new GatoBuilder()
+            Gato gato = new GatoBuilder()
                     .nome(nome)
                     .raca(escolheRacaGato)
                     .idade(idade)
@@ -39,13 +39,11 @@ public class CadastroGato {
                     .usaCaixa(usaCaixa)
                     .build();
 
-            AnimalRepository animalRepository = new AnimalRepository();
-            animalRepository.cadastro(gato1);
+            animalRepository.cadastro(gato);
             System.out.println("O gatinho foi cadastrado com sucesso. Logo ele encontrará um lar");
-
         } catch (InputMismatchException e) {
             System.out.println("Você digitou algo incorretamente no cadastro do gato, será necessário refazer o processo");
-            cadastrarGato(sc, animalRepositoryRepository);
+            cadastrarGato(sc, animalRepository);
         }
     }
 }
